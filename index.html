@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productivity Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+     <link rel="icon" type="image/png" href="./assets/icon.png">
+  </head>
+  <body class="text-[var(--pri)] ">
+
+    <main class="main h-full w-full bg-[var(--sec)]">
+      
+      <section class="allElems w-full h-full p-[2.5rem] pt-[3rem]  absolute ">
+          
+        <header class="w-full h-[25rem] bg-[var(--ter2)] mb-[30px] rounded-[20px] flex items-center justify-between p-[3rem]">
+         <div class="header1">
+             <h2 class="text-[2rem] font-[normal]"></h2>
+             <h1 class="text-[6.25rem] font-[bold] leading-none"></h1> 
+             <h4 class="text-[5rem] font-[normal]">Pune</h4>
+         </div>
+
+         <div class="header2">
+            <h2 class="temperature text-[5rem] font-[bold] leading-tight">20°C</h2>
+            <h4 class="weather text-[2rem] font-[normal] leading-tight">Partly sunny</h4>
+            <h3 class="precipitation text-[1.5rem] font-[normal] leading-tight opacity-80">Precipitation: 0%</h3>
+            <h3 class="humidity text-[1.5rem] font-[normal] leading-tight opacity-80">Humidity: 37%</h3>
+            <h3 class="wind text-[1.5rem] font-[normal] leading-tight opacity-80">Wind: 14 km/h</h3>
+            
+         </div>
+          
+        </header>
+
+         <div class="allFeatures flex flex-wrap justify-between items-start">
+           <div class="todo elem" id="0">
+              <img src="./assets/todoList.png" alt="">
+              <h2 class="absolute bottom-[3%] right-[5%] font-[normal] text-[3rem] ">To do List</h2>
+          </div>
+
+          <div class="moti elem" id="1">
+              <img src="./assets/motivation.png" alt="">
+              <h2 class="absolute bottom-[5%] right-[5%] font-[normal] text-[3rem] ">Motivation</h2>
+          </div>
+
+          <div class="pomo elem" id="2">
+                <img src="./assets/pomodoro.png" alt="">
+                <h2 class="absolute bottom-[3%] right-[5%] font-[normal] text-[3rem] ">Pomodoro</h2>
+          </div>
+         </div>
+
+      </section>
+
+      <section class="fullElem h-full w-full bg-[var(--sec)] p-[2.5rem] hidden absolute "> 
+        <button class="back absolute right-[5%] bg-red-600 text-[var(--pri)] rounded-md px-6 py-1  font-[normal]  text-[1.5rem] border-none cursor-pointer" id="0">Close</button>
+        <h2 class="text-[3.5rem] font-[light]">Your Personalised Task List</h2>
+
+        <div class="todoContainer w-full h-[80%]  mt-[1.3rem] flex items-center justify-between">
+            <div class="addTask h-full w-[33%] bg-[var(--ter2)] rounded-lg">
+              <form class="flex flex-col items-start p-6 ">
+
+                <input type="text" placeholder="Enter Task" class="input px-[25px] py-[10px] w-full text-[1.563rem] bg-[var(--pri)] rounded border-none outline-none mb-[20px] text-black">
+
+                <textarea name="" rows="9" placeholder="Enter Details" id="" class="details px-[25px] py-[10px] w-full text-[1.563rem] bg-[var(--pri)] rounded border-none outline-none mb-[20px] text-black"></textarea>
+
+                <div class="markImp flex  justify-start w-full  gap-3 mb-5">
+                  <input type="checkbox" name="checkbox" id="check" class="scale-125">
+                  <label for="check" class=" text-lg">Mark as Important</label>
+                </div>
+
+                <input type="submit" value="Add Task" class="submit btn px-[25px] py-[10px] w-full text-[1.563rem] bg-[var(--sec)] rounded border-none outline-none cursor-pointer">
+              </form>
+            </div>
+
+
+            <div class="allTask addTask h-full w-[65%] bg-[var(--ter2)] rounded-lg flex flex-col items-start p-[30px] gap-4 overflow-auto">
+            </div>
+        </div>
+
+
+      </section>
+
+      <section class="fullElem h-full w-full bg-[var(--sec)] p-[2.5rem] hidden relative"> 
+        <button class="back absolute right-[5%] bg-red-600 text-[var(--pri)] rounded-md px-6 py-1  font-[normal]  text-[1.5rem] border-none cursor-pointer" id="1">Close</button>
+        <div class="motivationContainer h-[31.25rem] w-[80%] bg-[var(--ter1)] absolute top-[50%] left-[50%]  translate-x-[-50%] translate-y-[-50%] rounded-[40px]">
+
+            <div class="motivationWrapper z-[10]  w-full bg-[var(--ter1)] absolute rounded-[40px] p-[17px]">
+              <div class="motivation-1  bg-[var(--ter2)] p-[30px] rounded-[20px] flex justify-between">
+                  <h2 class="text-[2.5rem] font-[normal] w-[24rem]">Quote of the Day</h2>
+                  <img src="./assets/quote.png" alt="" class=""> 
+              </div>
+
+              <div class="motivation-2 p-[10px] mt-[20px]">
+                <h1 class="text-[3.5rem] font-[normal] text-[var(--sec)]"></h1> 
+              </div>
+
+              <div class="motivation-3  p-[30px] rounded-[20px] mt-[30px] ">
+                <h2 class="text-[2.5rem] font-[normal] text-right"></h2> 
+                
+              </div>
+                  
+            </div>
+        </div>
+        
+      </section>
+
+      <section class="fullElem h-full w-full bg-[var(--sec)] p-[2.5rem] hidden absolute "> 
+        <button class="back absolute right-[5%] bg-red-600 text-[var(--pri)] rounded-md px-6 py-1  font-[normal]  text-[1.5rem] border-none cursor-pointer" id="2">Close</button>
+        <h2 class="text-[4.375rem] font-[light]">Study with me!</h2>
+        
+        <div class="pomoTimer absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center">
+          <audio src="./assets/alarm.mp3"></audio>
+          <div class="session px-[30px] py-[20px] bg-[var(--green)] text-2xl rounded-[5px] ">Work Session</div>
+          <h1 class="text-[10rem] font-[bold]">25:00</h1>
+          <button class="startTimer bg-[var(--ter2)] px-[30px] py-[10px] text-[1.75rem] m-[10px] rounded-[5px] shadow-[4px_4px_4px_rgba(0,0,0,0.35)] font-[bold]">Start</button>
+          <button class="pauseTimer bg-[var(--ter2)] px-[30px] py-[10px] text-[1.75rem] m-[10px] rounded-[5px] shadow-[4px_4px_4px_rgba(0,0,0,0.35)] font-[bold]">Pause</button>
+          <button class="resetTimer bg-[var(--ter2)] px-[30px] py-[10px] text-[1.75rem] m-[10px] rounded-[5px] shadow-[4px_4px_4px_rgba(0,0,0,0.35)] font-[bold]">Reset</button>
+        </div>
+      </section>
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,538 @@
+:root{
+    --pri: #fcdec0;
+    --sec: #381c0a;
+    --ter1: #feba17;
+    --ter2: #74512d;
+    --green : rgb(9, 138, 89);
+    --blue : rgb(0, 191, 255)
+}
+
+@font-face{
+    font-family: light;
+    src: url(./fonts/AeonikTRIAL-Light.otf);
+}
+
+@font-face{
+    font-family: normal;
+    src: url(./fonts/AeonikTRIAL-Regular.otf);
+}
+
+@font-face{
+    font-family: bold;
+    src: url(./fonts/AeonikTRIAL-Bold.otf);
+}
+
+*{
+    box-sizing: border-box;
+    
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+  
+}
+
+header{
+    background-image: url('https://images.unsplash.com/photo-1717361279773-b2e7ee713d2e?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+}
+
+.elem{
+    background: #feba17;
+    /* padding: 1.875rem 2.5rem; */
+    border-radius: 0.625rem;
+    /* font-size: 2.5rem; */
+    height: 24rem;
+    width: 36.625rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 50px var(--ter2);
+    margin-bottom: 2.5rem;
+
+}
+
+.elem:active{
+    scale:0.95;
+    transition: all ease 0.5s;
+}
+
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.elem h2{
+    backdrop-filter: blur(3px);
+    background-color:rgba(0, 0, 0, 0.014) ;
+}
+
+/* .fullElem{
+    height: 100%;
+    width: 100%;
+    background-color: var(--sec);
+    padding: 2.5rem;
+    font-size: 3.75rem;
+    display: none;
+    position: absolute;
+} */
+
+.back:active{
+    scale:0.95;
+    transition: all ease 0.5s;
+}
+
+.todoContainer .btn:active{
+    scale:0.95;
+    transition: all ease 0.5s;
+}
+
+
+.allTask::-webkit-scrollbar {
+    display: none;
+  }
+  .allTask {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+
+  .task h5 span{
+    background-color: red;
+    color: var(--pri);
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 50px;
+  }
+
+  .task h5 span.true{
+    opacity: 1;
+  }
+
+   .task h5 span.false{
+    opacity: 0;
+  }
+
+  .task button:active{
+    scale:0.95;
+    transition: all ease 0.5s;
+  }
+
+
+  .motivationContainer::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: var(--ter1);
+    border-radius: 40px;
+    scale: 1.15;
+    z-index:8;
+    filter: blur(100px);
+  }
+
+  .changeBtn:active{
+    scale:.95
+  }
+
+  .pomoTimer button:active{
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    scale:0.95;
+    transition: all ease 0.5s;
+    
+  }
+
+/* ------------------ Responsive Media Queries ------------------ */
+
+/* ------------------ Large tablets & small laptops ------------------ */
+@media screen and (max-width: 1200px) {
+  .allElems,
+  .fullElem {
+    padding: 2rem !important;
+    padding-top: 2.5rem !important;
+  }
+
+  .elem {
+    width: calc(50% - 1.25rem);
+    height: 20rem;
+  }
+
+  .motivationContainer {
+    width: 90% !important;
+    height: auto !important;
+    min-height: 28rem;
+  }
+
+  .motivation-1 h2 {
+    width: auto !important;
+    font-size: 2rem !important;
+  }
+
+  .motivation-2 h1 {
+    font-size: 2.75rem !important;
+  }
+
+  .motivation-3 h2 {
+    font-size: 2rem !important;
+  }
+}
+
+/* ------------------ Tablets ------------------ */
+@media screen and (max-width: 1024px) {
+  header {
+    height: auto !important;
+    min-height: 18rem;
+    padding: 2rem !important;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .header1 h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .header1 h1 {
+    font-size: 4.5rem !important;
+  }
+
+  .header1 h4 {
+    font-size: 3.5rem !important;
+  }
+
+  .header2 .temperature {
+    font-size: 3.5rem !important;
+  }
+
+  .header2 .weather {
+    font-size: 1.5rem !important;
+  }
+
+  .header2 .precipitation,
+  .header2 .humidity,
+  .header2 .wind {
+    font-size: 1.25rem !important;
+  }
+
+  .elem h2 {
+    font-size: 2.25rem !important;
+  }
+
+  .fullElem > h2 {
+    font-size: 2.5rem !important;
+  }
+
+  .todoContainer {
+    flex-direction: column;
+    height: auto !important;
+    gap: 1.5rem;
+  }
+
+  .todoContainer .addTask {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 22rem;
+  }
+
+  .todoContainer .allTask {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 20rem;
+    max-height: 28rem;
+  }
+
+  .pomoTimer h1 {
+    font-size: 7rem !important;
+  }
+
+  .motivation-1 img {
+    width: 5rem;
+    height: auto;
+  }
+}
+
+/* Small tablets & large phones */
+@media screen and (max-width: 768px) {
+  html,
+  body {
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+  }
+
+  .main {
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .allElems,
+  .fullElem {
+    position: relative !important;
+    height: auto !important;
+    min-height: 100vh;
+    overflow-y: auto;
+    padding: 1.25rem !important;
+    padding-top: 1.75rem !important;
+  }
+
+  header {
+    min-height: 14rem;
+    padding: 1.5rem !important;
+    margin-bottom: 1.25rem !important;
+    border-radius: 14px !important;
+  }
+
+  .header1 h2 {
+    font-size: 1.125rem !important;
+  }
+
+  .header1 h1 {
+    font-size: 3rem !important;
+  }
+
+  .header1 h4 {
+    font-size: 2.5rem !important;
+  }
+
+  .header2 .temperature {
+    font-size: 2.75rem !important;
+  }
+
+  .header2 .weather {
+    font-size: 1.25rem !important;
+  }
+
+  .header2 .precipitation,
+  .header2 .humidity,
+  .header2 .wind {
+    font-size: 1rem !important;
+  }
+
+  .allFeatures {
+    justify-content: center !important;
+    gap: 0;
+  }
+
+  .elem {
+    width: 100%;
+    height: 16rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .elem h2 {
+    font-size: 1.75rem !important;
+  }
+
+  .back {
+    right: 1.25rem !important;
+    font-size: 1.125rem !important;
+    padding: 0.25rem 1rem !important;
+  }
+
+  .fullElem > h2 {
+    font-size: 2rem !important;
+    padding-right: 5rem;
+  }
+
+  .todoContainer form .input,
+  .todoContainer form .details,
+  .todoContainer form .submit {
+    font-size: 1.125rem !important;
+    padding: 0.625rem 1rem !important;
+  }
+
+  .todoContainer form textarea.details {
+    min-height: 8rem;
+  }
+
+  .task {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem;
+    padding: 1rem !important;
+  }
+
+  .task > div {
+    width: 100% !important;
+  }
+
+  .task h5 {
+    font-size: 1.25rem !important;
+  }
+
+  .task button {
+    width: 100%;
+    font-size: 1rem !important;
+    padding: 0.75rem 1rem !important;
+  }
+
+  .motivationContainer {
+    width: 95% !important;
+    min-height: auto;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin: 3rem auto 0;
+  }
+
+  .motivationWrapper {
+    position: relative !important;
+    padding: 12px !important;
+  }
+
+  .motivation-1 {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem;
+    padding: 1.25rem !important;
+  }
+
+  .motivation-1 h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .motivation-1 img {
+    width: 4rem;
+    align-self: flex-end;
+  }
+
+  .motivation-2 h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.3;
+  }
+
+  .motivation-3 {
+    padding: 1rem !important;
+    margin-top: 1rem !important;
+  }
+
+  .motivation-3 h2 {
+    font-size: 1.25rem !important;
+  }
+
+  .pomoTimer {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .pomoTimer h1 {
+    font-size: 5rem !important;
+  }
+
+  .pomoTimer .session {
+    font-size: 1.125rem !important;
+    padding: 0.75rem 1.25rem !important;
+  }
+
+  .pomoTimer button {
+    font-size: 1.125rem !important;
+    padding: 0.625rem 1.25rem !important;
+    margin: 0.375rem !important;
+  }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 480px) {
+  .allElems,
+  .fullElem {
+    padding: 1rem !important;
+    padding-top: 1.5rem !important;
+  }
+
+  header {
+    min-height: 12rem;
+    padding: 1rem !important;
+    border-radius: 12px !important;
+  }
+
+  .header1 h1 {
+    font-size: 2.25rem !important;
+  }
+
+  .header1 h4 {
+    font-size: 1.75rem !important;
+  }
+
+  .header2 .temperature {
+    font-size: 2.25rem !important;
+  }
+
+  .elem {
+    height: 13rem;
+    border-radius: 0.5rem;
+  }
+
+  .elem h2 {
+    font-size: 1.375rem !important;
+    bottom: 3% !important;
+    right: 4% !important;
+  }
+
+  .fullElem > h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .back {
+    right: 1rem !important;
+    font-size: 1rem !important;
+  }
+
+  .todoContainer .addTask {
+    min-height: 18rem;
+  }
+
+  .todoContainer form .input,
+  .todoContainer form .details,
+  .todoContainer form .submit {
+    font-size: 1rem !important;
+  }
+
+  .motivation-2 h1 {
+    font-size: 1.375rem !important;
+  }
+
+  .pomoTimer h1 {
+    font-size: 3.5rem !important;
+  }
+
+  .pomoTimer button {
+    display: inline-block;
+    width: calc(50% - 0.75rem);
+    font-size: 1rem !important;
+  }
+
+  .pomoTimer .resetTimer {
+    width: calc(100% - 0.75rem);
+  }
+}
+
+/* Very small screens */
+@media screen and (max-width: 360px) {
+  .header1 h1 {
+    font-size: 1.875rem !important;
+  }
+
+  .header1 h2 {
+    font-size: 0.875rem !important;
+  }
+
+  .elem {
+    height: 11rem;
+  }
+
+  .elem h2 {
+    font-size: 1.125rem !important;
+  }
+
+  .pomoTimer h1 {
+    font-size: 2.75rem !important;
+  }
+}
