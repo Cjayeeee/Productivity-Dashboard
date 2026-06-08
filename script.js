@@ -218,7 +218,7 @@ const pomodoroTimer = () => {
         } 
         updateTimer(); 
       }
-    }, 1); 
+    }, 1000); 
   };
 
   const pauseTimer = () => {
