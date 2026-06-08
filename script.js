@@ -22,17 +22,17 @@ const dayTime = document.querySelector('.header1 h1')
 const dateTime = document.querySelector('.header1 h2')
 
 
-navigator.geolocation.getCurrentPosition(
-  position => {
-    const lat = position.coords.latitude;
-    const lon = position.coords.longitude;
+// navigator.geolocation.getCurrentPosition(
+//   position => {
+//     const lat = position.coords.latitude;
+//     const lon = position.coords.longitude;
 
-    console.log(lat, lon);
-  },
-  error => {
-    console.log(error.message);
-  }
-);
+//     console.log(lat, lon);
+//   },
+//   error => {
+//     console.log(error.message);
+//   }
+// );
 
 
 const weatherAPICall = async () =>{
