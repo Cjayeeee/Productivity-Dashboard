@@ -572,8 +572,7 @@ header{
   .motivation-2 h1 {
     font-size: 1.75rem !important;
     line-height: 1.35;
-    overflow-wrap: break-word;
-    word-break: break-word;
+   
   }
 
   .motivation-3 {
