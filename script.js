@@ -5,13 +5,13 @@ const openFeatures = () => {
 
   allELems.forEach((elem) => {
     elem.addEventListener("click", () => {
-      fullELemsPage[elem.id].style.display = "block";
+      fullELemsPage[elem.id].classList.remove("hidden");
     });
   });
 
   fullELemsBackBtn.forEach((back) => {
     back.addEventListener("click", () => {
-      fullELemsPage[back.id].style.display = "none";
+      fullELemsPage[back.id].classList.add("hidden");
     });
   });
 };
@@ -20,20 +20,6 @@ openFeatures();
 var data = null
 const dayTime = document.querySelector('.header1 h1')
 const dateTime = document.querySelector('.header1 h2')
-
-
-// navigator.geolocation.getCurrentPosition(
-//   position => {
-//     const lat = position.coords.latitude;
-//     const lon = position.coords.longitude;
-
-//     console.log(lat, lon);
-//   },
-//   error => {
-//     console.log(error.message);
-//   }
-// );
-
 
 const weatherAPICall = async () =>{
   const temperature = document.querySelector('.header2 .temperature')
