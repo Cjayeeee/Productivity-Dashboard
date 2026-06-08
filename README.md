@@ -8,6 +8,7 @@ A modern productivity dashboard built using HTML, CSS, and JavaScript.
 - Current weather information
 - Task management
 - Daily motivational quotes
+- Pomodoro timer
 - Local storage support
 - Responsive design
 - Clean and modern UI
@@ -51,7 +52,6 @@ const apiKey = "YOUR_API_KEY";
 
 - Dark/Light mode
 - Notes section
-- Pomodoro timer
 - User authentication
 
 ## Author
