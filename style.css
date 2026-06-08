@@ -204,6 +204,10 @@ header{
   overflow: hidden;
 }
 
+.fullElem.hidden {
+  display: none !important;
+}
+
 /* Desktop — restore original centered overlay layout */
 @media screen and (min-width: 769px) {
   .motivationContainer {
@@ -491,8 +495,8 @@ header{
     padding: 0.75rem 1rem !important;
   }
 
-  .fullElem:has(.motivationContainer),
-  .fullElem:has(.pomoTimer) {
+  .fullElem:has(.motivationContainer):not(.hidden),
+  .fullElem:has(.pomoTimer):not(.hidden) {
     display: flex;
     flex-direction: column;
     padding: 3.5rem 1rem 1rem !important;
