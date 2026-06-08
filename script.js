@@ -45,7 +45,7 @@ const weatherAPICall = async () =>{
 
   const apiKey = '3e757af23ae8411d8cb81620260806'
   let city = 'Pune'
-  let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`);
+  let response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`);
   data = await response.json();
 
   console.log(data);
