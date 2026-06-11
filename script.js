@@ -154,11 +154,11 @@ const motivationalQuote = () => {
   const changebtn = document.querySelector(".changeBtn");
 
   const fetchQuote = async () => {
-    let response = await fetch("https://zenquotes.io/api/random");
+    let response = await fetch("https://dummyjson.com/quotes/random");
     let data = await response.json();
 
-    quote.innerHTML = data.q;
-    author.innerHTML = "- " + data.a;
+    quote.innerHTML = data.quote;
+    author.innerHTML = "- " + data.author;
   };
   fetchQuote();
 };
